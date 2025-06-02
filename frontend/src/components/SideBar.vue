@@ -1,5 +1,5 @@
 <script setup lang="js">
-import {ref, computed} from 'vue';
+import {computed} from 'vue';
 import {useRouter} from 'vue-router';
 
 const emit = defineEmits(['update:expanded']);
@@ -11,7 +11,6 @@ const props = defineProps({
 });
 
 const router = useRouter();
-const visible = ref(true);
 const expanded = computed({
   get: () => props.expanded,
   set: (value) => emit('update:expanded', value)
@@ -32,19 +31,27 @@ const navigateTo = (route) => {
     <div class="menu-items">
       <div class="menu-item" @click="navigateTo('home')">
         <i class="pi pi-home"></i>
-        <span v-if="expanded">Home</span>
-      </div>
-      <div class="menu-item" @click="navigateTo('profile')">
-        <i class="pi pi-user"></i>
-        <span v-if="expanded">Profile</span>
-      </div>
-      <div class="menu-item" @click="navigateTo('settings')">
-        <i class="pi pi-cog"></i>
-        <span v-if="expanded">Settings</span>
+        <span v-if="expanded">Übersicht</span>
       </div>
       <div class="menu-item" @click="navigateTo('training')">
-        <i class="pi pi-cog"></i>
+        <i class="pi pi-user"></i>
         <span v-if="expanded">Training</span>
+      </div>
+      <div class="menu-item" @click="navigateTo('competition')">
+        <i class="pi pi-cog"></i>
+        <span v-if="expanded">Wettkampf</span>
+      </div>
+      <div class="menu-item" @click="navigateTo('calender')">
+        <i class="pi pi-cog"></i>
+        <span v-if="expanded">Kalender</span>
+      </div>
+      <div class="menu-item" @click="navigateTo('user-management')">
+        <i class="pi pi-cog"></i>
+        <span v-if="expanded">Benutzerverwaltung</span>
+      </div>
+      <div class="menu-item" @click="navigateTo('profile')">
+        <i class="pi pi-cog"></i>
+        <span v-if="expanded">Profil</span>
       </div>
     </div>
   </div>

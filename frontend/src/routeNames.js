@@ -8,7 +8,8 @@ export const RouteNames = {
   CALENDAR: 'Kalender',
   USER_MANAGEMENT: 'Benutzerverwaltung',
   LOGIN: 'Login',
-  NOT_FOUND: 'Seite nicht gefunden'
+  NOT_FOUND: 'Seite nicht gefunden',
+  PROFILE: 'Profil'
 }
 
 export default RouteNames;

@@ -18,8 +18,8 @@ const showSidebar = computed(() => {
 
 <template>
   <div class="flex flex-row w-full h-screen">
-    <SideBar v-if="showSidebar" v-model:expanded="sidebarExpanded" class="flex-none" style="position: fixed; left: 0; top: 0; z-index: 1000;"></SideBar>
-    <div class="flex-grow-1" :class="{ 'ml-0': !showSidebar, 'ml-64': showSidebar && sidebarExpanded, 'ml-20': showSidebar && !sidebarExpanded }">
+    <SideBar v-if="showSidebar" v-model:expanded="sidebarExpanded" class="flex-none"></SideBar>
+    <div class="flex-grow-1">
       <RouterView/>
     </div>
   </div>

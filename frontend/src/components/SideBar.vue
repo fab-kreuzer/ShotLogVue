@@ -34,23 +34,23 @@ const navigateTo = (route) => {
         <span v-if="expanded">Übersicht</span>
       </div>
       <div class="menu-item" @click="navigateTo('training')">
-        <i class="pi pi-user"></i>
+        <i class="pi pi-book"></i>
         <span v-if="expanded">Training</span>
       </div>
       <div class="menu-item" @click="navigateTo('competition')">
-        <i class="pi pi-cog"></i>
+        <i class="pi pi-flag"></i>
         <span v-if="expanded">Wettkampf</span>
       </div>
       <div class="menu-item" @click="navigateTo('calender')">
-        <i class="pi pi-cog"></i>
+        <i class="pi pi-calendar"></i>
         <span v-if="expanded">Kalender</span>
       </div>
       <div class="menu-item" @click="navigateTo('user-management')">
-        <i class="pi pi-cog"></i>
+        <i class="pi pi-users"></i>
         <span v-if="expanded">Benutzerverwaltung</span>
       </div>
       <div class="menu-item" @click="navigateTo('profile')">
-        <i class="pi pi-cog"></i>
+        <i class="pi pi-user"></i>
         <span v-if="expanded">Profil</span>
       </div>
     </div>
